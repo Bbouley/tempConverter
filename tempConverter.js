@@ -6,10 +6,11 @@ var fc = prompt('Do you want to convert from C or F?');
 
 var temp = prompt('What\'s the temperature you\'d like to convert?')
 
-    if (isNaN(temp)){
-      alert('You have to choose a number bro!')
+    while (isNaN(temp)){
+      temp = prompt ('You have to choose a number bro!')
     }
-     else if (temp != NaN && fc === ('c'||'C') ){
+
+       if (temp != NaN && fc === ('c'||'C') ){
          var tfx = temp * (9/5) + 32
          var tf = tfx.toFixed(2)
          alert('It is ' + tf + ' degrees Fahrenheit')
